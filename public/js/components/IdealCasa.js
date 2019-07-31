@@ -41,11 +41,11 @@ var Filter = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         "section",
-        { className: "filter" },
+        { id: "filters" },
         _react2.default.createElement(
           "h1",
           null,
-          "Filtros"
+          "Encuentra la casa de tus sue\xF1os"
         ),
         _react2.default.createElement(
           "h4",

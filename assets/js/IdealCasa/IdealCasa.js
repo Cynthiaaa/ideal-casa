@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import Header from './Header.js'
+import Header from './Header'
 import Filter from './Filter'
 import Listings from './Listings'
 
