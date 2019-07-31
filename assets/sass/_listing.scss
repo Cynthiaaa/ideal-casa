@@ -1,0 +1,35 @@
+header {
+    background: $yellow;
+    color: $black; 
+    overflow: auto;
+    padding: 30px;
+
+    .logo {
+      float: left;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 1.3rem;
+    }
+
+    nav {
+        float: right;
+        text-transform: capitalize;
+
+        a { 
+            text-decoration: none;
+            color: $black; 
+            padding: 0 25px;
+
+            &:hover {
+                color: $medium-pink;
+            }
+
+            &.login-btn {
+                background-color: $light-pink;
+                padding: 5px 10px;
+                border-radius: 5px;
+                text-align: center;
+            }
+        }
+    }
+}
