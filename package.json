@@ -1,5 +1,5 @@
 {
-  "name": "Ideal Casa",
+  "name": "IdealCasa",
   "version": "1.0.0",
   "description": "Best Real Estate Agency in Barcelona",
   "main": "index.js",
@@ -29,16 +29,15 @@
     "gulp-uglify": "^2.0.0",
     "gulp-watch": "^4.3.9",
     "html-webpack-plugin": "^2.28.0",
-    "node-sass": "^4.5.2",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
+    "node-sass": "^4.12.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-native-svg": "^9.5.3",
     "react-redux": "^5.0.4",
     "react-router": "^4.1.1",
     "redux": "^3.6.0",
     "sass-loader": "^6.0.3",
     "standard": "^10.0.2",
-    "webpack": "^2.5.1",
     "webpack-stream": "^3.2.0"
   },
   "scripts": {
@@ -50,6 +49,7 @@
   },
   "devDependencies": {
     "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1"
+    "babel-preset-stage-0": "^6.24.1",
+    "webpack": "^2.7.0"
   }
 }
