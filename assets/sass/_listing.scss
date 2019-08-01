@@ -14,7 +14,7 @@ header {
     nav {
         float: right;
         text-transform: capitalize;
-        margin-right: 200px;
+        margin-right: 80px;
 
         a { 
             text-decoration: none;
@@ -35,7 +35,7 @@ header {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     nav {
      display: none;
     }
