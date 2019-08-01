@@ -1,7 +1,7 @@
 #filters {
     background-color: $light-gray;
     width: 20%;
-    height: 800px;
+    height: 1400px;
     padding: 30px;
     font-size: 18px;
     float: left;
@@ -33,3 +33,10 @@
         }
     }
 }
+
+@media screen and (max-width: 700px) {
+    #filters {
+     width: 90%;
+     height: 450px;
+    }
+  }

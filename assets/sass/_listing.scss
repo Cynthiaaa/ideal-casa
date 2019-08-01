@@ -3,9 +3,9 @@ header {
     color: $black; 
     overflow: auto;
     padding: 30px;
+    width: 100%;
 
     .logo {
-      float: left;
       text-transform: uppercase;
       font-weight: 500;
       font-size: 1.3rem;
@@ -14,6 +14,7 @@ header {
     nav {
         float: right;
         text-transform: capitalize;
+        margin-right: 200px;
 
         a { 
             text-decoration: none;
@@ -33,3 +34,12 @@ header {
         }
     }
 }
+
+@media screen and (max-width: 600px) {
+    nav {
+     display: none;
+    }
+    .logo {
+        text-align: center;
+    }
+  }
