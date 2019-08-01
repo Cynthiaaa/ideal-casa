@@ -9,6 +9,17 @@ export default class Listing extends Component {
   }
 
   render () {
-    return ( <section className="listings">Listings</section>)
+    return ( <section id="listings">Listings
+      
+      <section id="search-box">
+      </section>
+
+      <section id="gallery-results">
+      </section>
+
+      <section id="pagination">
+      </section>
+
+    </section>)
   }
 }

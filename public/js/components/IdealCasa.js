@@ -299,8 +299,11 @@ var Listing = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         "section",
-        { className: "listings" },
-        "Listings"
+        { id: "listings" },
+        "Listings",
+        _react2.default.createElement("section", { id: "search-box" }),
+        _react2.default.createElement("section", { id: "gallery-results" }),
+        _react2.default.createElement("section", { id: "pagination" })
       );
     }
   }]);
