@@ -35,17 +35,19 @@ header {
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     nav {
      padding-top: 20px;
+  }
+
+  .logo {
+      padding-bottom: 10px;
   }
 }
 
 @media screen and (max-width: 700px) {
-    nav {
-     display: none;
-    }
-    .logo {
-        text-align: center;
-    }
+  nav {
+      display: none;
   }
+}
+

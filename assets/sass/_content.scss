@@ -57,8 +57,30 @@
     margin-left: 5px;
     font-size: 18px;
   }
-
 }
+
+
+//Media queries - Responsiveness
+@media screen and (max-width: 1400px) {
+#search-box {
+  margin-top: 20px;
+}
+}
+
+
+@media screen and (max-width: 1200px) {
+ #listings {
+   width: 69%;
+   padding-top: 20px;
+ }
+}
+
+@media screen and (max-width: 1090px) {
+  #listings {
+    width: 50%;
+    padding-top: 20px;
+  }
+ }
 
 @media screen and (max-width: 700px) {
     #filters {
