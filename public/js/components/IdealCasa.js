@@ -350,10 +350,10 @@ var Listing = function (_Component) {
               _react2.default.createElement(
                 "div",
                 { className: "details" },
-                _react2.default.createElement("div", { className: "agency-img" }),
                 _react2.default.createElement(
                   "div",
                   { className: "agency-details" },
+                  _react2.default.createElement("div", { className: "agency-img" }),
                   _react2.default.createElement(
                     "span",
                     { className: "agency-name" },
@@ -362,7 +362,7 @@ var Listing = function (_Component) {
                   _react2.default.createElement(
                     "span",
                     { className: "agency-name" },
-                    "03/05/2019"
+                    "Publicado el 03/05/2019"
                   )
                 )
               ),
