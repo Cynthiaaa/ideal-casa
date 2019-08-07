@@ -57,6 +57,47 @@
     margin-left: 5px;
     font-size: 18px;
   }
+
+  input[type="text"] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px black solid;
+    margin-right: 30px;
+    font-size: 16px;
+  }
+}
+
+
+#pagination {
+  text-align: center;
+  margin-top: 40px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+
+  .pages {
+      display: inline-block;
+      margin: 0 auto;
+      background: $white; 
+      -webkit-box-shadow: 0px 0px 44px -17px rgba(232,232,232,1);
+      -moz-box-shadow: 0px 0px 44px -17px rgba(232,232,232,1);
+      box-shadow: 0px 0px 44px -17px rgba(232,232,232,1);
+
+      li {
+          padding: 20px 30px;
+          display: inline-block;
+
+          &.active,
+          &:hover {
+              background: $light-pink;
+              color: $white;
+              cursor: pointer;
+          }
+      }
+  }
 }
 
 
@@ -64,7 +105,7 @@
 @media screen and (max-width: 1400px) {
 #search-box {
   margin-top: 20px;
-}
+ }
 }
 
 

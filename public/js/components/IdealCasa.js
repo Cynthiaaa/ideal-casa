@@ -314,7 +314,7 @@ var Listing = function (_Component) {
             _react2.default.createElement(
               "span",
               { className: "sort-name" },
-              "Ordenar:"
+              "Ordenar :"
             ),
             _react2.default.createElement(
               "select",
@@ -338,8 +338,90 @@ var Listing = function (_Component) {
           ),
           _react2.default.createElement("input", { type: "text", name: "search", placeholder: "Que buscas ?" })
         ),
-        _react2.default.createElement("section", { id: "gallery-results" }),
-        _react2.default.createElement("section", { id: "pagination" })
+        _react2.default.createElement(
+          "section",
+          { id: "gallery-results" },
+          _react2.default.createElement(
+            "div",
+            { className: "listing" },
+            _react2.default.createElement(
+              "div",
+              { className: "listing-img" },
+              _react2.default.createElement(
+                "span",
+                { className: "adress" },
+                "Adress"
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "details" },
+                _react2.default.createElement("div", { className: "agency-img" }),
+                _react2.default.createElement(
+                  "div",
+                  { className: "agency-details" },
+                  _react2.default.createElement(
+                    "span",
+                    { className: "agency-name" },
+                    "Barna Luxury agency"
+                  ),
+                  _react2.default.createElement(
+                    "span",
+                    { className: "agency-name" },
+                    "03/05/2019"
+                  )
+                ),
+                _react2.default.createElement(
+                  "div",
+                  { className: "listing-details" },
+                  _react2.default.createElement(
+                    "div",
+                    { className: "price" },
+                    "3000\u20AC / mes"
+                  ),
+                  _react2.default.createElement(
+                    "div",
+                    { className: "location" },
+                    _react2.default.createElement("i", { className: "fa fa-map-marker", "aria-hidden": "true" }),
+                    "Barcelona"
+                  )
+                )
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          "section",
+          { id: "pagination" },
+          _react2.default.createElement(
+            "ul",
+            { className: "pages" },
+            _react2.default.createElement(
+              "li",
+              null,
+              "Prev"
+            ),
+            _react2.default.createElement(
+              "li",
+              { className: "active" },
+              "1"
+            ),
+            _react2.default.createElement(
+              "li",
+              null,
+              "2"
+            ),
+            _react2.default.createElement(
+              "li",
+              null,
+              "3"
+            ),
+            _react2.default.createElement(
+              "li",
+              null,
+              "Next"
+            )
+          )
+        )
       );
     }
   }]);
