@@ -65,8 +65,23 @@
     margin-right: 30px;
     font-size: 16px;
   }
+
+  .pagination{
+    margin-top: 50px;
+    text-align: center;
+
+    ul{
+        display: inline-flex;
+    }
+    li{
+        padding: 10px;
+    }
+}
 }
 
+#gallery-results {
+   margin-top: 20px;
+}
 
 #pagination {
   text-align: center;
@@ -148,6 +163,11 @@
     }
     input {
       display: none;
+    }
+
+    #pagination{
+      position: static;
+      width: 80%;
     }
   }
 

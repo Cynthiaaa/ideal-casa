@@ -413,11 +413,6 @@ var Listing = function (_Component) {
             _react2.default.createElement(
               "li",
               null,
-              "3"
-            ),
-            _react2.default.createElement(
-              "li",
-              null,
               "Next"
             )
           )
