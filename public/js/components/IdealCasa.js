@@ -348,11 +348,6 @@ var Listing = function (_Component) {
               "div",
               { className: "listing-img" },
               _react2.default.createElement(
-                "span",
-                { className: "adress" },
-                "Adress"
-              ),
-              _react2.default.createElement(
                 "div",
                 { className: "details" },
                 _react2.default.createElement("div", { className: "agency-img" }),
@@ -369,22 +364,27 @@ var Listing = function (_Component) {
                     { className: "agency-name" },
                     "03/05/2019"
                   )
-                ),
-                _react2.default.createElement(
-                  "div",
-                  { className: "listing-details" },
-                  _react2.default.createElement(
-                    "div",
-                    { className: "price" },
-                    "3000\u20AC / mes"
-                  ),
-                  _react2.default.createElement(
-                    "div",
-                    { className: "location" },
-                    _react2.default.createElement("i", { className: "fa fa-map-marker", "aria-hidden": "true" }),
-                    "Barcelona"
-                  )
                 )
+              ),
+              _react2.default.createElement(
+                "span",
+                { className: "adress" },
+                "Adress"
+              )
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "listing-details" },
+              _react2.default.createElement(
+                "div",
+                { className: "price" },
+                "3000\u20AC / mes"
+              ),
+              _react2.default.createElement(
+                "div",
+                { className: "location" },
+                _react2.default.createElement("i", { className: "fa fa-map-marker", "aria-hidden": "true" }),
+                " Barcelona"
               )
             )
           )

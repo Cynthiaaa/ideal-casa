@@ -27,24 +27,24 @@ export default class Listing extends Component {
       <section id="gallery-results">
         <div className="listing">
           <div className="listing-img">
-             <span className="adress">Adress</span>
-             <div className="details">
+          <div className="details">
                  <div className="agency-img"></div>
                  <div className="agency-details">
                    <span className="agency-name">Barna Luxury agency</span>
                    <span className="agency-name">03/05/2019</span>
                  </div>
-                 <div className="listing-details">
+             </div>
+             <span className="adress">Adress</span>
+          </div>
+          <div className="listing-details">
                     <div className="price">
                      3000€ / mes
                     </div>
                     <div className="location">
-                      <i className="fa fa-map-marker" aria-hidden="true"></i>Barcelona
+                      <i className="fa fa-map-marker" aria-hidden="true"></i> Barcelona
                     </div>
                  </div>
-             </div>
-          </div>
-        </div> 
+            </div> 
       </section>
 
       <section id="pagination">
