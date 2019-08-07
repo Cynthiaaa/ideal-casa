@@ -13,7 +13,8 @@ export default class Listing extends Component {
       <span className="listing-number">14.570 casas y pisos en alquiler en Barcelona</span>
       
       <section id="search-box">
-        <div className="sort-options"> Ordenar :
+        <div className="sort-options">
+          <span className="sort-name">Ordenar:</span>
           <select className="sort-by" name="sort-by">
             <option value="relevance">Relevancia</option>
             <option value="price-asc">Baratos</option>

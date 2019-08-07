@@ -311,7 +311,11 @@ var Listing = function (_Component) {
           _react2.default.createElement(
             "div",
             { className: "sort-options" },
-            " Ordenar :",
+            _react2.default.createElement(
+              "span",
+              { className: "sort-name" },
+              "Ordenar:"
+            ),
             _react2.default.createElement(
               "select",
               { className: "sort-by", name: "sort-by" },

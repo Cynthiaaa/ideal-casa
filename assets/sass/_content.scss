@@ -57,18 +57,34 @@
     margin-left: 5px;
     font-size: 18px;
   }
+
 }
 
 @media screen and (max-width: 700px) {
     #filters {
      width: 100%;
-     height: 480px;
+     height: 400px;
     }
     select {
       background: transparent; 
       font-size:16px;
       margin-top: 3px;
       width: 80%;
+    }
+
+    #listings{
+      width: 100%;
+    }
+    .sort-options {
+      margin-top: 20px;
+      display: inherit;
+      width: 100%;
+    }
+    .sort-name {
+      display: none;
+    }
+    input {
+      display: none;
     }
   }
 
@@ -82,6 +98,21 @@
         font-size:16px;
         margin-top: 3px;
         width: 90%;
+    }
+
+    #listings{
+      width: 100%;
+    }
+    .sort-options {
+      margin-top: 20px;
+      display: inherit;
+      width: 100%;
+    }
+    .sort-name {
+      display: none;
+    }
+    input {
+      display: none;
     }
   }
 }
