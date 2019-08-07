@@ -1,7 +1,7 @@
 #filters {
     background-color: $light-gray;
     width: 20%;
-    height: 1400px;
+    height: 800px;
     padding: 30px;
     font-size: 18px;
     float: left;
@@ -36,8 +36,27 @@
 
 #listings{
   width: 70%; 
-  padding: 35px;
+  padding: 30px;
   display: inline-block;
+
+  .listing-number{
+    font-size: 28px;
+  }
+
+  #search-box {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .sort-options {
+    padding-left: 10px;
+    font-size: 20px;
+  }
+  
+  .sort-by {
+    margin-left: 5px;
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -50,7 +69,7 @@
       font-size:16px;
       margin-top: 3px;
       width: 80%;
-  }
+    }
   }
 
   @media screen and (max-width: 400px) {

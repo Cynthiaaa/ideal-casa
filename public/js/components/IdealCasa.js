@@ -300,8 +300,40 @@ var Listing = function (_Component) {
       return _react2.default.createElement(
         "section",
         { id: "listings" },
-        "Listings",
-        _react2.default.createElement("section", { id: "search-box" }),
+        _react2.default.createElement(
+          "span",
+          { className: "listing-number" },
+          "14.570 casas y pisos en alquiler en Barcelona"
+        ),
+        _react2.default.createElement(
+          "section",
+          { id: "search-box" },
+          _react2.default.createElement(
+            "div",
+            { className: "sort-options" },
+            " Ordenar :",
+            _react2.default.createElement(
+              "select",
+              { className: "sort-by", name: "sort-by" },
+              _react2.default.createElement(
+                "option",
+                { value: "relevance" },
+                "Relevancia"
+              ),
+              _react2.default.createElement(
+                "option",
+                { value: "price-asc" },
+                "Baratos"
+              ),
+              _react2.default.createElement(
+                "option",
+                { value: "recent" },
+                "Recientes"
+              )
+            )
+          ),
+          _react2.default.createElement("input", { type: "text", name: "search", placeholder: "Que buscas ?" })
+        ),
         _react2.default.createElement("section", { id: "gallery-results" }),
         _react2.default.createElement("section", { id: "pagination" })
       );
