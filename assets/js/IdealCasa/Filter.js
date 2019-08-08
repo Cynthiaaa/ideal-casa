@@ -24,15 +24,15 @@ export default class Filter extends Component {
 
          <h4> Tipo de inmueble</h4>
       <select name="homeType" className="homeType"onChange={this.props.change}>
-         <option value="Todas">Todas</option>
+         <option value="Todas">Todos</option>
          <option value="Apartamiento">Apartamiento</option>
          <option value="Casa">Casa</option>
       </select>
 
         <div name="prices" className="filter prices">
           <h4>Precio</h4>
-           <input type="text" name="min_price" placeholder="Min" className="min_price" onChange={this.props.change}/>
-           <input type="text" name="max_price" placeholder="Max" className="max_price" onChange={this.props.change}/>
+           <input type="text" name="min_price" placeholder="Min" className="min_price" onChange={this.props.change} value={this.props.globalState.min_price}/>
+           <input type="text" name="max_price" placeholder="Max" className="max_price" onChange={this.props.change} value={this.props.globalState.max_price}/>
        </div>
 
         <div name="surface" className="filter surface">

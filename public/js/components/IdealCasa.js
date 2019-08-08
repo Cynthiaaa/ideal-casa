@@ -92,7 +92,7 @@ var Filter = function (_Component) {
           _react2.default.createElement(
             "option",
             { value: "Todas" },
-            "Todas"
+            "Todos"
           ),
           _react2.default.createElement(
             "option",
@@ -113,8 +113,8 @@ var Filter = function (_Component) {
             null,
             "Precio"
           ),
-          _react2.default.createElement("input", { type: "text", name: "min_price", placeholder: "Min", className: "min_price", onChange: this.props.change }),
-          _react2.default.createElement("input", { type: "text", name: "max_price", placeholder: "Max", className: "max_price", onChange: this.props.change })
+          _react2.default.createElement("input", { type: "text", name: "min_price", placeholder: "Min", className: "min_price", onChange: this.props.change, value: this.props.globalState.min_price }),
+          _react2.default.createElement("input", { type: "text", name: "max_price", placeholder: "Max", className: "max_price", onChange: this.props.change, value: this.props.globalState.max_price })
         ),
         _react2.default.createElement(
           "div",
@@ -603,6 +603,8 @@ var _ListingData2 = _interopRequireDefault(_ListingData);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -618,12 +620,29 @@ var App = function (_Component) {
         var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
 
         _this.state = {
-            listingData: _ListingData2.default
+            listingData: _ListingData2.default,
+            min_price: 0,
+            max_price: 10000,
+            min_floor_space: 0,
+            max_floor_space: 1000
         };
+        _this.change = _this.change.bind(_this);
         return _this;
     }
 
     _createClass(App, [{
+        key: 'change',
+        value: function change(event) {
+            var _this2 = this;
+
+            var name = event.target.name;
+            var value = event.target.value;
+
+            this.setState(_defineProperty({}, name, value), function () {
+                console.log(_this2.state);
+            });
+        }
+    }, {
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
@@ -633,7 +652,7 @@ var App = function (_Component) {
                 _react2.default.createElement(
                     'section',
                     { id: 'content' },
-                    _react2.default.createElement(_Filter2.default, null),
+                    _react2.default.createElement(_Filter2.default, { change: this.change, globalState: this.state }),
                     _react2.default.createElement(_Listings2.default, { listingData: this.state.listingData })
                 )
             );
