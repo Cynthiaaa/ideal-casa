@@ -412,7 +412,7 @@ var Listing = function (_Component) {
             _react2.default.createElement(
               "li",
               null,
-              "Prev"
+              "Anterior"
             ),
             _react2.default.createElement(
               "li",
@@ -427,7 +427,7 @@ var Listing = function (_Component) {
             _react2.default.createElement(
               "li",
               null,
-              "Next"
+              "Siguiente"
             )
           )
         )

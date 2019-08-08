@@ -64,10 +64,10 @@ export default class Listing extends Component {
 
       <section id="pagination">
          <ul className="pages">
-             <li>Prev</li>
+             <li>Anterior</li>
              <li className="active">1</li>
              <li>2</li>
-             <li>Next</li>
+             <li>Siguiente</li>
          </ul>
       </section>
 
