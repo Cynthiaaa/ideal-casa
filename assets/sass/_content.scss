@@ -88,14 +88,18 @@
 #gallery-results {
   margin-top: 30px;
   color: $white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 
   .listing{
-    width: 33.33%;
+    width: 32%;
     border-radius: 5px;
     -webkit-box-shadow: 2px 2px 16px 0px rgba(173,168,173,1);
     -moz-box-shadow: 2px 2px 16px 0px rgba(173,168,173,1);
     box-shadow: 2px 2px 16px 0px rgba(173,168,173,1);
     background: linear-gradient(to top left, #d99cc4 0%, #8c1f6f 100%);
+    margin: 5px 5px;
   }
 
   .details {
@@ -172,7 +176,6 @@
 #pagination {
   text-align: center;
   margin-top: 40px;
-  position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
