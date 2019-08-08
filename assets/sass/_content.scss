@@ -109,22 +109,37 @@
   }
 
   .agency-img {
-    width: 80px; 
-    height: 80px; 
+    width: 50px; 
+    height: 50px; 
     border-radius: 50%;
-    border: 2 solid white;
+    border: 2px solid white;
+    background: url("http://communitywatch.us/img/11131/modern-house-inside-modern-houses-interior-designs-home-design-ideas-answersland.jpg") no-repeat center center; 
+    display: inline-block;
+    margin-top: 30px;
   }
 
   .agency-details {
-    display: inline-block;
+   margin-top: 15px;
+  }
+
+  .agency-name {
+    display: block;
+    padding-bottom: 10px;
   }
 
   .listing-details {
     text-align: center;
     padding: 15px 15px;
   }
-}
 
+  .adress {
+    margin-top: 50px;
+  }
+
+  .price {
+    padding-bottom: 10px;
+  }
+ }
 }
 
 #pagination {

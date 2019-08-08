@@ -28,13 +28,12 @@ export default class Listing extends Component {
         <div className="listing">
           <div className="listing-img">
           <div className="details">
+              <div className="agency-img"></div>
                  <div className="agency-details">
-                 <div className="agency-img"></div>
-                   <span className="agency-name">Barna Luxury agency</span>
-                   <span className="agency-name">Publicado el 03/05/2019</span>
+                   <span className="agency-name">Barna Luxury Agency</span>
+                   <span className="agency-date">Publicado el 03/05/2019</span>
                  </div>
              </div>
-             <span className="adress">Adress</span>
           </div>
           <div className="listing-details">
                     <div className="price">

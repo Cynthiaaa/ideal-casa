@@ -350,26 +350,21 @@ var Listing = function (_Component) {
               _react2.default.createElement(
                 "div",
                 { className: "details" },
+                _react2.default.createElement("div", { className: "agency-img" }),
                 _react2.default.createElement(
                   "div",
                   { className: "agency-details" },
-                  _react2.default.createElement("div", { className: "agency-img" }),
                   _react2.default.createElement(
                     "span",
                     { className: "agency-name" },
-                    "Barna Luxury agency"
+                    "Barna Luxury Agency"
                   ),
                   _react2.default.createElement(
                     "span",
-                    { className: "agency-name" },
+                    { className: "agency-date" },
                     "Publicado el 03/05/2019"
                   )
                 )
-              ),
-              _react2.default.createElement(
-                "span",
-                { className: "adress" },
-                "Adress"
               )
             ),
             _react2.default.createElement(
