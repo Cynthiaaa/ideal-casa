@@ -6,6 +6,38 @@ export default class Listing extends Component {
     this.state = {
   
     }
+    this.loopListings = this.loopListings.bind(this)
+  }
+
+  loopListings () {
+
+          var {listingData} = this.props
+
+           return listingData.map((listing, index) => {
+
+            return (  
+           <div className="listing" key={index}>  
+             <div className="listing-img" style={{background: `url("${listing.image}") no-repeat center center`}}>
+             <div className="details">
+                <div className="agency-img"></div>
+                   <div className="agency-details">
+                     <span className="agency-name">{listing.agency}</span>
+                     <span className="agency-date">{listing.date}</span>
+                     <div className="view">View Listing</div>
+                   </div>
+               </div>
+            </div>
+            <div className="listing-details">
+                      <div className="price">
+                       {listing.price} / mes
+                      </div>
+                      <div className="location">
+                        <i className="fa fa-map-marker" aria-hidden="true"></i> {listing.city}
+                      </div>
+                   </div>
+              </div>
+              )
+           })
   }
 
   render () {
@@ -25,25 +57,9 @@ export default class Listing extends Component {
       </section>
 
       <section id="gallery-results">
-        <div className="listing">
-          <div className="listing-img">
-          <div className="details">
-              <div className="agency-img"></div>
-                 <div className="agency-details">
-                   <span className="agency-name">Barna Luxury Agency</span>
-                   <span className="agency-date">Publicado el 03/05/2019</span>
-                 </div>
-             </div>
-          </div>
-          <div className="listing-details">
-                    <div className="price">
-                     3000€ / mes
-                    </div>
-                    <div className="location">
-                      <i className="fa fa-map-marker" aria-hidden="true"></i> Barcelona
-                    </div>
-                 </div>
-            </div> 
+    
+            {this.loopListings()}
+          
       </section>
 
       <section id="pagination">

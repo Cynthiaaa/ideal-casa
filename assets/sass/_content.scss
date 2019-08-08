@@ -98,6 +98,10 @@
     background: linear-gradient(to top left, #d99cc4 0%, #8c1f6f 100%);
   }
 
+  .details {
+    display: none;
+  }
+
   .listing-img {
     position: relative;
     background: url("https://i.pinimg.com/originals/50/ce/71/50ce7129b450475210f7808abe6aecfb.jpg") no-repeat center center; 
@@ -118,7 +122,7 @@
       min-height: 200px;
 
       .details {
-        display: none;
+        display: block;
       }
     }
   }
@@ -140,6 +144,16 @@
   .agency-name {
     display: block;
     padding-bottom: 10px;
+  }
+
+  .view {
+    display: block;
+    background: $black;
+    border-radius: 5px;
+    max-width: 150px;
+    padding: 5px 5px;
+    margin: 0 auto;
+    margin-top: 10px !important;
   }
 
   .listing-details {
@@ -185,17 +199,6 @@
           }
       }
   }
-}
-
-.col-md-3 {
-  width: 25%;
-  display: inline-block;
-  vertical-align: top;
-}
-
-.col-md-9 {
-  width: 75%;
-  display: inline-block;
 }
 
 

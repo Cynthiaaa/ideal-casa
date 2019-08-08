@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom'
 import Header from './Header'
 import Filter from './Filter'
 import Listings from './Listings'
+import listingData from './data/ListingData'
 
 class App extends Component {
     constructor() {
         super()
+        this.state = {
+            listingData,
+        }
     }
 
 render () {
@@ -14,7 +18,7 @@ render () {
         <Header />
         <section id="content">
             <Filter />
-            <Listings />
+            <Listings listingData = {this.state.listingData} />
         </section>
         </div>)
  }
