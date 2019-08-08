@@ -90,15 +90,16 @@
   color: $white;
 
   .listing{
-    background-color: $light-pink;
     width: 33.33%;
     border-radius: 5px;
     -webkit-box-shadow: 2px 2px 16px 0px rgba(173,168,173,1);
     -moz-box-shadow: 2px 2px 16px 0px rgba(173,168,173,1);
     box-shadow: 2px 2px 16px 0px rgba(173,168,173,1);
+    background: linear-gradient(to top left, #d99cc4 0%, #8c1f6f 100%);
   }
 
   .listing-img {
+    position: relative;
     background: url("https://i.pinimg.com/originals/50/ce/71/50ce7129b450475210f7808abe6aecfb.jpg") no-repeat center center; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -106,6 +107,20 @@
     background-size: cover;
     min-height: 200px;
     text-align: center;
+    cursor: pointer; 
+
+    &:hover {
+      opacity: 0.5;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      min-height: 200px;
+
+      .details {
+        display: none;
+      }
+    }
   }
 
   .agency-img {
@@ -129,11 +144,9 @@
 
   .listing-details {
     text-align: center;
-    padding: 15px 15px;
-  }
-
-  .adress {
-    margin-top: 50px;
+    padding: 15px 15px; 
+    color: $black;
+    background-color: $white;
   }
 
   .price {
@@ -172,6 +185,17 @@
           }
       }
   }
+}
+
+.col-md-3 {
+  width: 25%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.col-md-9 {
+  width: 75%;
+  display: inline-block;
 }
 
 
