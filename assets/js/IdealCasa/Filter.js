@@ -56,7 +56,7 @@ export default class Filter extends Component {
   render () {
     return ( 
     <section id="filters">
-         <h1>Encuentra la casa de tus sueños</h1>
+         <h1>Filtros</h1>
 
           <h4>Cuitad</h4>
        <select name="city" className="city" onChange={this.props.change} >

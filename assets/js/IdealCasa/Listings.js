@@ -23,7 +23,7 @@ export default class Listing extends Component {
            <div className="listing" key={index}>  
              <div className="listing-img" style={{background: `url("${listing.image}") no-repeat center center`}}>
              <div className="details">
-                <div className="agency-img"></div>
+                <div className="agency-img" style={{background: `url("${listing.agencyImg}") no-repeat center center`}}></div>
                    <div className="agency-details">
                      <span className="agency-name">{listing.agency}</span>
                      <span className="agency-date">{listing.date}</span>
@@ -56,7 +56,7 @@ export default class Listing extends Component {
             <option value="price-desc">Mas Caros</option>
           </select>
         </div>
-        <input type="text" name="search" onChange={this.props.change}/>
+        <input type="text" name="search" placeholder="Que buscas ?" onChange={this.props.change}/>
       </section>
 
       <section id="gallery-results">

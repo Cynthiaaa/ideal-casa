@@ -83,18 +83,18 @@ class App extends Component {
         })
     }
 
-    //   if(this.state.search != ''){
-    //       newData = newData.filter((item) => {
-    //          var city = item.city.toLowerCase()
-    //          var searchText = this.state.search.toLowerCase()
-    //          var x = city.match(searchText)
+      if(this.state.search != ''){
+          newData = newData.filter((item) => {
+             var city = item.city.toLowerCase()
+             var searchText = this.state.search.toLowerCase()
+             var x = city.match(searchText)
 
-    //          if(x != null) {
-    //              return true
-    //          }
+             if(x != null) {
+                 return true
+             }
 
-    //       })
-    //   }
+          })
+      }
 
        this.setState({
            filteredData: newData

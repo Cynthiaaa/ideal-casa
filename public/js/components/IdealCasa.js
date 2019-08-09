@@ -105,7 +105,7 @@ var Filter = function (_Component) {
         _react2.default.createElement(
           "h1",
           null,
-          "Encuentra la casa de tus sue\xF1os"
+          "Filtros"
         ),
         _react2.default.createElement(
           "h4",
@@ -234,7 +234,7 @@ var Header = function (_Component) {
         _react2.default.createElement(
           "div",
           { className: "logo" },
-          "Ideal Casa Barcelona"
+          "Ideal Casa Barcelona - Encuentra la casa de tus sue\xF1os"
         ),
         _react2.default.createElement(
           "nav",
@@ -324,7 +324,7 @@ var Listing = function (_Component) {
             _react2.default.createElement(
               "div",
               { className: "details" },
-              _react2.default.createElement("div", { className: "agency-img" }),
+              _react2.default.createElement("div", { className: "agency-img", style: { background: "url(\"" + listing.agencyImg + "\") no-repeat center center" } }),
               _react2.default.createElement(
                 "div",
                 { className: "agency-details" },
@@ -403,7 +403,7 @@ var Listing = function (_Component) {
               )
             )
           ),
-          _react2.default.createElement("input", { type: "text", name: "search", onChange: this.props.change })
+          _react2.default.createElement("input", { type: "text", name: "search", placeholder: "Que buscas ?", onChange: this.props.change })
         ),
         _react2.default.createElement(
           "section",
@@ -463,6 +463,7 @@ var listingData = [{
     neighbourhood: "Barrio Garcia",
     city: 'L Hospitalet de Llobregat',
     agency: 'Rocio from Agencia Gaudi',
+    agencyImg: 'https://images.unsplash.com/photo-1541271696563-3be2f555fc4e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE3Nzg0fQ',
     date: 'Posted on 02/04/2019',
     rooms: 3,
     bathroom: 1,
@@ -477,6 +478,7 @@ var listingData = [{
     neighbourhood: "Barrio Eixample",
     city: 'Barcelona',
     agency: 'Valerio from Agencia Sagrada',
+    agencyImg: 'https://tinyfac.es/data/avatars/E0B4CAB3-F491-4322-BEF2-208B46748D4A-200w.jpeg',
     date: 'Posted on 28/03/2019',
     rooms: 1,
     bathroom: 3,
@@ -491,6 +493,7 @@ var listingData = [{
     neighbourhood: "Barrio Eixample",
     city: 'Sabadell',
     agency: 'Rocio from Agencia Gaudi',
+    agencyImg: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=707b9c33066bf8808c934c8ab394dff6',
     date: 'Posted on 25/03/2019',
     rooms: 0,
     bathroom: 1,
@@ -505,6 +508,7 @@ var listingData = [{
     neighbourhood: "Barrio Monjuic",
     city: 'El Prat de Llobregat',
     agency: 'Valerio from Agencia Sagrada',
+    agencyImg: 'https://tinyfac.es/data/avatars/E0B4CAB3-F491-4322-BEF2-208B46748D4A-200w.jpeg',
     date: 'Posted on 21/03/2019',
     rooms: 4,
     bathroom: 2,
@@ -519,6 +523,7 @@ var listingData = [{
     neighbourhood: "Barrio Eixample",
     city: 'Barcelona',
     agency: 'Valerio from Agencia Sagrada',
+    agencyImg: 'https://tinyfac.es/data/avatars/E0B4CAB3-F491-4322-BEF2-208B46748D4A-200w.jpeg',
     date: 'Posted on 28/03/2019',
     rooms: 2,
     bathroom: 1,
@@ -533,6 +538,7 @@ var listingData = [{
     neighbourhood: "Barrio Eixample",
     city: 'Sabadell',
     agency: 'Rocio from Agencia Gaudi',
+    agencyImg: 'https://images.pexels.com/photos/227294/pexels-photo-227294.jpeg?h=350&auto=compress&cs=tinysrgb',
     date: 'Posted on 25/03/2019',
     rooms: 2,
     bathroom: 3,
@@ -547,6 +553,7 @@ var listingData = [{
     neighbourhood: "Barrio Monjuic",
     city: 'El Prat de Llobregat',
     agency: 'Valerio from Agencia Sagrada',
+    agencyImg: 'https://tinyfac.es/data/avatars/E0B4CAB3-F491-4322-BEF2-208B46748D4A-200w.jpeg',
     date: 'Posted on 21/03/2019',
     rooms: 1,
     bathroom: 2,
@@ -561,6 +568,7 @@ var listingData = [{
     neighbourhood: "Barrio Monjuic",
     city: 'El Prat de Llobregat',
     agency: 'Valerio from Agencia Sagrada',
+    agencyImg: 'https://tinyfac.es/data/avatars/E0B4CAB3-F491-4322-BEF2-208B46748D4A-200w.jpeg',
     date: 'Posted on 21/03/2019',
     rooms: 1,
     bathroom: 2,
@@ -711,18 +719,17 @@ var App = function (_Component) {
                 });
             }
 
-            //   if(this.state.search != ''){
-            //       newData = newData.filter((item) => {
-            //          var city = item.city.toLowerCase()
-            //          var searchText = this.state.search.toLowerCase()
-            //          var x = city.match(searchText)
+            if (this.state.search != '') {
+                newData = newData.filter(function (item) {
+                    var city = item.city.toLowerCase();
+                    var searchText = _this3.state.search.toLowerCase();
+                    var x = city.match(searchText);
 
-            //          if(x != null) {
-            //              return true
-            //          }
-
-            //       })
-            //   }
+                    if (x != null) {
+                        return true;
+                    }
+                });
+            }
 
             this.setState({
                 filteredData: newData
