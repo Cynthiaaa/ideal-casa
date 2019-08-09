@@ -91,7 +91,7 @@ var Filter = function (_Component) {
           { name: "homeType", className: "homeType", onChange: this.props.change },
           _react2.default.createElement(
             "option",
-            { value: "Todas" },
+            { value: "Todos" },
             "Todos"
           ),
           _react2.default.createElement(
@@ -625,6 +625,9 @@ var App = function (_Component) {
 
         _this.state = {
             listingData: _ListingData2.default,
+            city: "Todas",
+            homeType: "Todos",
+            rooms: "Todas",
             min_price: 0,
             max_price: 10000,
             min_floor_space: 0,
@@ -657,6 +660,25 @@ var App = function (_Component) {
             var newData = this.state.listingData.filter(function (item) {
                 return item.price >= _this3.state.min_price && item.price <= _this3.state.max_price && item.floorspace >= _this3.state.min_floor_space && item.floorspace <= _this3.state.max_floor_space;
             });
+
+            if (this.state.city != "Todas") {
+                newData = newData.filter(function (item) {
+                    return item.city == _this3.state.city;
+                });
+            }
+
+            if (this.state.homeType != "Todos") {
+                newData = newData.filter(function (item) {
+                    return item.homeType == _this3.state.homeType;
+                });
+            }
+
+            if (this.state.rooms != "Todas") {
+                newData = newData.filter(function (item) {
+                    return item.rooms == _this3.state.rooms;
+                });
+            }
+
             this.setState({
                 filteredData: newData
             });

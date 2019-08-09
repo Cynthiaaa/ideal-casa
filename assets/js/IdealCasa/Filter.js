@@ -24,7 +24,7 @@ export default class Filter extends Component {
 
          <h4> Tipo de inmueble</h4>
       <select name="homeType" className="homeType"onChange={this.props.change}>
-         <option value="Todas">Todos</option>
+         <option value="Todos">Todos</option>
          <option value="Apartamiento">Apartamiento</option>
          <option value="Casa">Casa</option>
       </select>
