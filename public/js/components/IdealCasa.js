@@ -33,10 +33,70 @@ var Filter = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Filter.__proto__ || Object.getPrototypeOf(Filter)).call(this));
 
     _this.state = {};
+    _this.cities = _this.cities.bind(_this);
     return _this;
   }
 
   _createClass(Filter, [{
+    key: "componentWillMount",
+    value: function componentWillMount() {
+      this.props.populateAction();
+    }
+  }, {
+    key: "cities",
+    value: function cities() {
+      if (this.props.globalState.populateFormData.cities != undefined) {
+        var cities = this.props.globalState.populateFormData.cities;
+
+
+        console.log(cities);
+
+        return cities.map(function (item) {
+          return _react2.default.createElement(
+            "option",
+            { key: item, value: item },
+            item
+          );
+        });
+      }
+    }
+  }, {
+    key: "homeTypes",
+    value: function homeTypes() {
+      if (this.props.globalState.populateFormData.homeTypes != undefined) {
+        var homeTypes = this.props.globalState.populateFormData.homeTypes;
+
+
+        console.log(homeTypes);
+
+        return homeTypes.map(function (item) {
+          return _react2.default.createElement(
+            "option",
+            { key: item, value: item },
+            item
+          );
+        });
+      }
+    }
+  }, {
+    key: "bedrooms",
+    value: function bedrooms() {
+      if (this.props.globalState.populateFormData.bedrooms != undefined) {
+        var bedrooms = this.props.globalState.populateFormData.bedrooms;
+
+
+        console.log(bedrooms);
+
+        return bedrooms.map(function (item) {
+          return _react2.default.createElement(
+            "option",
+            { key: item, value: item },
+            item
+          );
+        });
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
       return _react2.default.createElement(
@@ -60,26 +120,7 @@ var Filter = function (_Component) {
             { value: "Todas" },
             "Todas"
           ),
-          _react2.default.createElement(
-            "option",
-            { value: "Barcelona" },
-            "Barcelona"
-          ),
-          _react2.default.createElement(
-            "option",
-            { value: "Sabadell" },
-            "Sabadell"
-          ),
-          _react2.default.createElement(
-            "option",
-            { value: "L Hospitalet de Llobregat" },
-            "L'Hospitalet de Llobregat"
-          ),
-          _react2.default.createElement(
-            "option",
-            { value: "El Prat de Llobregat" },
-            "El Prat de Llobregat"
-          )
+          this.cities()
         ),
         _react2.default.createElement(
           "h4",
@@ -94,16 +135,7 @@ var Filter = function (_Component) {
             { value: "Todos" },
             "Todos"
           ),
-          _react2.default.createElement(
-            "option",
-            { value: "Apartamiento" },
-            "Apartamiento"
-          ),
-          _react2.default.createElement(
-            "option",
-            { value: "Casa" },
-            "Casa"
-          )
+          this.homeTypes()
         ),
         _react2.default.createElement(
           "div",
@@ -143,31 +175,7 @@ var Filter = function (_Component) {
               { value: "Todas" },
               "Todas"
             ),
-            _react2.default.createElement(
-              "option",
-              { value: "0" },
-              "0"
-            ),
-            _react2.default.createElement(
-              "option",
-              { value: "1" },
-              "1"
-            ),
-            _react2.default.createElement(
-              "option",
-              { value: "2" },
-              "2"
-            ),
-            _react2.default.createElement(
-              "option",
-              { value: "3" },
-              "3"
-            ),
-            _react2.default.createElement(
-              "option",
-              { value: "+4" },
-              "4"
-            )
+            this.bedrooms()
           )
         )
       );
@@ -400,7 +408,7 @@ var Listing = function (_Component) {
               )
             )
           ),
-          _react2.default.createElement("input", { type: "text", name: "search", placeholder: "Que buscas ?" })
+          _react2.default.createElement("input", { type: "text", name: "search", onChange: this.props.change })
         ),
         _react2.default.createElement(
           "section",
@@ -607,6 +615,8 @@ var _ListingData2 = _interopRequireDefault(_ListingData);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -632,10 +642,13 @@ var App = function (_Component) {
             max_price: 10000,
             min_floor_space: 0,
             max_floor_space: 1000,
-            filteredData: _ListingData2.default
+            filteredData: _ListingData2.default,
+            search: '',
+            populateFormData: ''
         };
         _this.change = _this.change.bind(_this);
         _this.filteredData = _this.filteredData.bind(_this);
+        _this.populateForm = _this.populateForm.bind(_this);
         return _this;
     }
 
@@ -679,8 +692,54 @@ var App = function (_Component) {
                 });
             }
 
+            //   if(this.state.search != ''){
+            //       newData = newData.filter((item) => {
+            //          var city = item.city.toLowerCase()
+            //          var searchText = this.state.search.toLowerCase()
+            //          var x = city.match(searchText)
+
+            //          if(x != null) {
+            //              return true
+            //          }
+
+            //       })
+            //   }
+
             this.setState({
                 filteredData: newData
+            });
+        }
+    }, {
+        key: 'populateForm',
+        value: function populateForm() {
+            var _this4 = this;
+
+            var cities = this.state.listingData.map(function (item) {
+                return item.city;
+            });
+            cities = new Set(cities);
+            cities = [].concat(_toConsumableArray(cities));
+
+            var homeTypes = this.state.listingData.map(function (item) {
+                return item.homeType;
+            });
+            homeTypes = new Set(homeTypes);
+            homeTypes = [].concat(_toConsumableArray(homeTypes));
+
+            var bedrooms = this.state.listingData.map(function (item) {
+                return item.rooms;
+            });
+            bedrooms = new Set(bedrooms);
+            bedrooms = [].concat(_toConsumableArray(bedrooms));
+
+            this.setState({
+                populateFormData: {
+                    homeTypes: homeTypes,
+                    bedrooms: bedrooms,
+                    cities: cities
+                }
+            }, function () {
+                console.log(_this4.state);
             });
         }
     }, {
@@ -693,7 +752,7 @@ var App = function (_Component) {
                 _react2.default.createElement(
                     'section',
                     { id: 'content' },
-                    _react2.default.createElement(_Filter2.default, { change: this.change, globalState: this.state }),
+                    _react2.default.createElement(_Filter2.default, { change: this.change, globalState: this.state, populateAction: this.populateForm }),
                     _react2.default.createElement(_Listings2.default, { listingData: this.state.filteredData })
                 )
             );

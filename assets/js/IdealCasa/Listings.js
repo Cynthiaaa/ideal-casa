@@ -57,7 +57,7 @@ export default class Listing extends Component {
             <option value="recent">Recientes</option>
           </select>
         </div>
-        <input type="text" name="search" placeholder="Que buscas ?" />
+        <input type="text" name="search" onChange={this.props.change}/>
       </section>
 
       <section id="gallery-results">
