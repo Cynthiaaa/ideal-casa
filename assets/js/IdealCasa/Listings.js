@@ -51,10 +51,9 @@ export default class Listing extends Component {
       <section id="search-box">
         <div className="sort-options">
           <span className="sort-name">Ordenar :</span>
-          <select className="sort-by" name="sort-by">
-            <option value="relevance">Relevancia</option>
+          <select className="sort-by" name="sortby" onChange={this.props.change}>
             <option value="price-asc">Baratos</option>
-            <option value="recent">Recientes</option>
+            <option value="price-desc">Mas Caros</option>
           </select>
         </div>
         <input type="text" name="search" onChange={this.props.change}/>

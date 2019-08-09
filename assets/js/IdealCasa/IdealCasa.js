@@ -19,12 +19,23 @@ class App extends Component {
             max_floor_space: 1000,
             filteredData: listingData, 
             search: '', 
-            populateFormData: ''
+            populateFormData: '', 
+            sortby: 'price-asc'
         }
         this.change = this.change.bind(this)
         this.filteredData = this.filteredData.bind(this)
         this.populateForm = this.populateForm.bind(this)
     }
+    componentWillMount(){
+      var listingData = this.state.listingData.sort((a, b) =>{
+         return a.price - b.price
+      })
+
+        this.setState({
+           listingData
+       })
+    }
+
     change(event) {
         var name = event.target.name
         var value = event.target.value
@@ -60,6 +71,18 @@ class App extends Component {
         })
       }
 
+      if(this.state.sortby == 'price-asc'){
+          newData = newData.sort((a,b) => {
+             return a.price - b.price
+          })
+      }
+
+      if(this.state.sortby == 'price-desc'){
+        newData = newData.sort((a,b) => {
+           return b.price - a.price
+        })
+    }
+
     //   if(this.state.search != ''){
     //       newData = newData.filter((item) => {
     //          var city = item.city.toLowerCase()
@@ -85,17 +108,24 @@ class App extends Component {
         cities = new Set(cities)
         cities = [...cities]
 
+        cities = cities.sort()
+
         var homeTypes  = this.state.listingData.map((item) => {
             return item.homeType
         })
         homeTypes = new Set(homeTypes)
         homeTypes = [...homeTypes]
 
+        homeTypes = homeTypes.sort()
+
         var bedrooms  = this.state.listingData.map((item) => {
             return item.rooms
         })
         bedrooms = new Set(bedrooms)
         bedrooms = [...bedrooms]
+
+        
+        bedrooms = bedrooms.sort()
 
         this.setState({
             populateFormData: {
@@ -113,7 +143,7 @@ render () {
         <Header />
         <section id="content">
             <Filter change={this.change} globalState={this.state} populateAction={this.populateForm} />
-            <Listings listingData = {this.state.filteredData} />
+            <Listings change={this.change} listingData = {this.state.filteredData} />
         </section>
         </div>)
  }
