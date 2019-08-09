@@ -37,8 +37,8 @@ export default class Filter extends Component {
 
         <div name="surface" className="filter surface">
           <h4>Tamano</h4>
-           <input type="text" name="min_floor_space" placeholder="Min" className="min_floor_space" onChange={this.props.change}/>
-           <input type="text" name="max_floor_space"placeholder="Max" className="max_floor_space" onChange={this.props.change}/>
+           <input type="text" name="min_floor_space" placeholder="Min" className="min_floor_space" onChange={this.props.change} value={this.props.globalState.min_floor_space}/>
+           <input type="text" name="max_floor_space"placeholder="Max" className="max_floor_space" onChange={this.props.change} value={this.props.globalState.max_floor_space}/>
         </div>
 
         <div name="bedrooms" className="filter bedrooms">

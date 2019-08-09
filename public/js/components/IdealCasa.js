@@ -124,8 +124,8 @@ var Filter = function (_Component) {
             null,
             "Tamano"
           ),
-          _react2.default.createElement("input", { type: "text", name: "min_floor_space", placeholder: "Min", className: "min_floor_space", onChange: this.props.change }),
-          _react2.default.createElement("input", { type: "text", name: "max_floor_space", placeholder: "Max", className: "max_floor_space", onChange: this.props.change })
+          _react2.default.createElement("input", { type: "text", name: "min_floor_space", placeholder: "Min", className: "min_floor_space", onChange: this.props.change, value: this.props.globalState.min_floor_space }),
+          _react2.default.createElement("input", { type: "text", name: "max_floor_space", placeholder: "Max", className: "max_floor_space", onChange: this.props.change, value: this.props.globalState.max_floor_space })
         ),
         _react2.default.createElement(
           "div",
@@ -482,7 +482,7 @@ var listingData = [{
     extras: ['ascensor', 'terraza'],
     homeType: 'Apartamiento',
     equipment: 'Solo cocina equipada',
-    image: 'http://communitywatch.us/img/11131/modern-house-inside-modern-houses-interior-designs-home-design-ideas-answersland.jpg'
+    image: 'https://i.pinimg.com/originals/ca/f5/07/caf50744c28e3f9ef79095aa84388148.jpg'
 }, {
     address: 'Carrer de Gracia 234',
     neighbourhood: "Barrio Eixample",
@@ -524,7 +524,7 @@ var listingData = [{
     extras: ['ascensor', 'terraza'],
     homeType: 'Apartamiento',
     equipment: 'Solo cocina equipada',
-    image: 'http://editorial-ink.us/img/17046/f3f831ff7072cb7a61930c81ffc39c8a--contemporary-interior-design-interior-design-ideas-home.jpg'
+    image: 'https://www.impressiveinteriordesign.com/diverse/spanisharch/32270053591.jpg'
 }, {
     address: 'Carrer de Gracia 234',
     neighbourhood: "Barrio Eixample",
@@ -655,7 +655,7 @@ var App = function (_Component) {
             var _this3 = this;
 
             var newData = this.state.listingData.filter(function (item) {
-                return item.price >= _this3.state.min_price && item.price <= _this3.state.max_price;
+                return item.price >= _this3.state.min_price && item.price <= _this3.state.max_price && item.floorspace >= _this3.state.min_floor_space && item.floorspace <= _this3.state.max_floor_space;
             });
             this.setState({
                 filteredData: newData

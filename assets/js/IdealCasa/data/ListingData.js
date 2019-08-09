@@ -33,7 +33,7 @@ var listingData  = [
         ],
     homeType: 'Apartamiento', 
     equipment: 'Solo cocina equipada', 
-    image: 'http://communitywatch.us/img/11131/modern-house-inside-modern-houses-interior-designs-home-design-ideas-answersland.jpg'
+    image: 'https://i.pinimg.com/originals/ca/f5/07/caf50744c28e3f9ef79095aa84388148.jpg'
     },
     {
     address: 'Carrer de Gracia 234', 
@@ -87,7 +87,7 @@ var listingData  = [
     ],
     homeType: 'Apartamiento', 
     equipment: 'Solo cocina equipada', 
-    image: 'http://editorial-ink.us/img/17046/f3f831ff7072cb7a61930c81ffc39c8a--contemporary-interior-design-interior-design-ideas-home.jpg'
+    image: 'https://www.impressiveinteriordesign.com/diverse/spanisharch/32270053591.jpg'
 },
 {
     address: 'Carrer de Gracia 234', 
