@@ -301,6 +301,10 @@ var Listing = function (_Component) {
       var listingData = this.props.listingData;
 
 
+      if (listingData == undefined || listingData.length == 0) {
+        return "Lo sentimos, no se han encontrado resultados para su búsqueda.";
+      }
+
       return listingData.map(function (listing, index) {
 
         return _react2.default.createElement(
@@ -624,9 +628,11 @@ var App = function (_Component) {
             min_price: 0,
             max_price: 10000,
             min_floor_space: 0,
-            max_floor_space: 1000
+            max_floor_space: 1000,
+            filteredData: _ListingData2.default
         };
         _this.change = _this.change.bind(_this);
+        _this.filteredData = _this.filteredData.bind(_this);
         return _this;
     }
 
@@ -640,6 +646,19 @@ var App = function (_Component) {
 
             this.setState(_defineProperty({}, name, value), function () {
                 console.log(_this2.state);
+                _this2.filteredData();
+            });
+        }
+    }, {
+        key: 'filteredData',
+        value: function filteredData() {
+            var _this3 = this;
+
+            var newData = this.state.listingData.filter(function (item) {
+                return item.price >= _this3.state.min_price && item.price <= _this3.state.max_price;
+            });
+            this.setState({
+                filteredData: newData
             });
         }
     }, {
@@ -653,7 +672,7 @@ var App = function (_Component) {
                     'section',
                     { id: 'content' },
                     _react2.default.createElement(_Filter2.default, { change: this.change, globalState: this.state }),
-                    _react2.default.createElement(_Listings2.default, { listingData: this.state.listingData })
+                    _react2.default.createElement(_Listings2.default, { listingData: this.state.filteredData })
                 )
             );
         }

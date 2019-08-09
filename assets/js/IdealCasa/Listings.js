@@ -13,6 +13,10 @@ export default class Listing extends Component {
 
           var {listingData} = this.props
 
+          if(listingData == undefined || listingData.length == 0) {
+            return "Lo sentimos, no se han encontrado resultados para su búsqueda."
+          }
+
            return listingData.map((listing, index) => {
 
             return (  

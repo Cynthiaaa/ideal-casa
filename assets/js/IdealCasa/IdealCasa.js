@@ -14,8 +14,10 @@ class App extends Component {
             max_price: 10000,
             min_floor_space: 0, 
             max_floor_space: 1000,
+            filteredData: listingData
         }
         this.change = this.change.bind(this)
+        this.filteredData = this.filteredData.bind(this)
     }
     change(event) {
         var name = event.target.name
@@ -25,8 +27,17 @@ class App extends Component {
           [name]: value
         }, () => {
             console.log(this.state)
-        }
-        )
+        this.filteredData()
+        })
+    }
+
+    filteredData(){
+       var newData = this.state.listingData.filter((item) => {
+           return item.price >= this.state.min_price && item.price <= this.state.max_price
+       })
+       this.setState({
+           filteredData: newData
+       })
     }
 
 render () {
@@ -34,7 +45,7 @@ render () {
         <Header />
         <section id="content">
             <Filter change={this.change} globalState={this.state} />
-            <Listings listingData = {this.state.listingData} />
+            <Listings listingData = {this.state.filteredData} />
         </section>
         </div>)
  }
