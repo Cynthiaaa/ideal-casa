@@ -11,7 +11,7 @@ If you want to use this repository :
 - Make sure you have Node JS installed in your computer. 
 
 - You will need to install all the Node.JS packages as they are not included in the repository: 
-    npm install
+    - npm install
     
 - This repository is using Gulp and Webpack to compile the Front-End.
     - npm install gulp-cli -g 
@@ -19,4 +19,5 @@ If you want to use this repository :
     - npm install webpack --save-dev
     - npm install webpack-cli --save-dev
     
- - To run the project, open the terminal and write : npm run watch 
+ - To run the project, open the terminal and write : 
+    - npm run watch 
