@@ -36,7 +36,8 @@ header {
     }
 }
 
-@media screen and (max-width: 800px) {
+//Media queries - Responsiveness Desktop
+@media screen and (max-width: 1000px) {
 
     header {
         text-align: center;

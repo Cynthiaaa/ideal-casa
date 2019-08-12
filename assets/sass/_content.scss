@@ -137,13 +137,13 @@
   }
 
   .agency-img {
-    width: 50px; 
-    height: 50px; 
+    width: 60px; 
+    height: 60px; 
     border-radius: 50%;
-    background-size: 50px;
+    background-size: 60px;
     border: 2px solid white;
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 10px;
     color: $white;
   }
 
@@ -214,51 +214,39 @@
 }
 
 
-//Media queries - Responsiveness
-@media screen and (max-width: 1500px) {
+//Media queries - Responsiveness Desktop
+@media (min-width : 1090px) and (max-width : 1550px) {
 #search-box {
   margin-top: 20px;
  }
  #listings {
-  width: 65%;
+  width: 75%;
   padding-top: 20px;
-}
-}
-
-
-@media screen and (max-width: 1200px) {
- #listings {
-   width: 65%;
-   padding-top: 20px;
- }
+   }
 }
 
-@media screen and (max-width: 1090px) {
-  #listings {
-    width: 60%;
-    padding-top: 20px;
-  }
- }
 
-@media screen and (max-width: 700px) {
+@media (min-width: 320px) and (max-width : 1089px) {
     #filters {
      width: 100%;
      height: 400px;
     }
     select {
       background: transparent; 
-      font-size:16px;
+      font-size: 16px;
       margin-top: 3px;
       width: 80%;
     }
 
     #listings{
-      width: 100%;
+      width: 85%;
+      text-align: center;
+      margin-left: 100px;
     }
     .sort-options {
       margin-top: 20px;
       display: inherit;
-      width: 100%;
+      width: 80%;
     }
     .sort-name {
       display: none;
@@ -272,32 +260,3 @@
       width: 80%;
     }
   }
-
-  @media screen and (max-width: 400px) {
-    #filters {
-      h1{
-        font-size: 18px;
-    }    
-      select {
-        background: transparent; 
-        font-size:16px;
-        margin-top: 3px;
-        width: 90%;
-    }
-
-    #listings{
-      width: 100%;
-    }
-    .sort-options {
-      margin-top: 20px;
-      display: inherit;
-      width: 100%;
-    }
-    .sort-name {
-      display: none;
-    }
-    input {
-      display: none;
-    }
-  }
-}

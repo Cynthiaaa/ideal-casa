@@ -27,7 +27,7 @@ export default class Listing extends Component {
                    <div className="agency-details">
                      <span className="agency-name">{listing.agency}</span>
                      <span className="agency-date">{listing.date}</span>
-                     <div className="view">View Listing</div>
+                     <div className="view">Ver Más</div>
                    </div>
                </div>
             </div>
