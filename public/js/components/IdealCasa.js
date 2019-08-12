@@ -234,7 +234,7 @@ var Header = function (_Component) {
         _react2.default.createElement(
           "div",
           { className: "logo" },
-          "Ideal Casa Barcelona - Encuentra la casa de tus sue\xF1os"
+          "Ideal Casa Barcelona "
         ),
         _react2.default.createElement(
           "nav",

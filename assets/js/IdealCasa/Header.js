@@ -10,7 +10,7 @@ export default class Header extends Component {
 
   render () {
     return ( <header>
-      <div className="logo">Ideal Casa Barcelona - Encuentra la casa de tus sueños</div>
+      <div className="logo">Ideal Casa Barcelona </div>
       <nav>
         <a href="#">Pon tu anuncio gratis</a>
         <a href="#">Sobre nosotros</a>
