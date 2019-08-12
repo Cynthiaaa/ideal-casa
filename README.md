@@ -14,9 +14,9 @@ If you want to use this repository :
     npm install
     
 - This repository is using Gulp and Webpack to compile the Front-End.
-    npm install gulp-cli -g 
-    npm install gulp 
-    npm install webpack --save-dev
-    npm install webpack-cli --save-dev
+    - npm install gulp-cli -g 
+    - npm install gulp 
+    - npm install webpack --save-dev
+    - npm install webpack-cli --save-dev
     
  - To run the project, open the terminal and write : npm run watch 
