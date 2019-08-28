@@ -6,18 +6,32 @@ This project was built with React.js, SASS, Node.js, Webpack, Gulp. Deployed wit
 
 If you want to use this repository : 
 
-- Download this repository. 
+## Installation
 
-- Make sure you have Node JS installed in your computer. 
+1. Download this repository. 
 
-- You will need to install all the Node.JS packages as they are not included in the repository: 
-    - npm install
+2. Make sure you have Node JS installed in your computer (if not go to https://nodejs.org and download it). 
+
+3. You will need to install all the Node.JS packages as they are not included in the repository: 
+```bash
+   npm install
+```
     
-- This repository is using Gulp and Webpack to compile the Front-End.
-    - npm install gulp-cli -g 
-    - npm install gulp 
-    - npm install webpack --save-dev
-    - npm install webpack-cli --save-dev
+4. This repository is using Gulp and Webpack to compile the Front-End.
+ ```bash
+ npm install gulp-cli -g 
+ ```
+ ```bash
+ npm install gulp 
+ ```
+ ```bash
+ npm install webpack --save-dev
+ ```
+ ```bash
+ npm install webpack-cli --save-dev
+ ```
     
- - To run the project, open the terminal and write : 
-    - npm run watch 
+ 5. To run the project, open the terminal and write : 
+ ```bash
+ npm run watch 
+ ```
