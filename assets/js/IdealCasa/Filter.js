@@ -58,7 +58,7 @@ export default class Filter extends Component {
     <section id="filters">
          <h1>Filtros</h1>
 
-          <h4>Cuitad</h4>
+          <h4>Ciutad</h4>
        <select name="city" className="city" onChange={this.props.change} >
            <option value="Todas">Todas</option>
            {this.cities()}
@@ -77,7 +77,7 @@ export default class Filter extends Component {
        </div>
 
         <div name="surface" className="filter surface">
-          <h4>Tamano</h4>
+          <h4>Tamaño</h4>
            <input type="text" name="min_floor_space" placeholder="Min" className="min_floor_space" onChange={this.props.change} value={this.props.globalState.min_floor_space}/>
            <input type="text" name="max_floor_space"placeholder="Max" className="max_floor_space" onChange={this.props.change} value={this.props.globalState.max_floor_space}/>
         </div>
